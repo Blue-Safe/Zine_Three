@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Name | HR Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="company-name">Dunder Mifflin</div>
+
+    <hr class="rule" />
+
+    <nav class="nav">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Products</a>
+      <a href="#" class="nav-link">Gallery</a>
+      <a href="#" class="nav-link">Careers</a>
+      <a href="#" class="nav-link">Contact</a>
+      <a href="#" class="nav-link">HR</a>
+    </nav>
+
+    <hr class="rule" />
+  </header>
+
+  
+  <main class="page">
+
+    
+    <section class="card" id="screenStart">
+      <h1 class="card-title">HR Claim Portal</h1>
+
+      <p>
+        You are an employee reporting misconduct to HR after your boss, Mr.Smith,
+         made inappropriate remarks about your body and touched you without your consent. Write a complaint that accurately reflects the seriousness of the situation and how it impacted you.
+      <p class="fineprint">
+        Note: This portal enforces company policy language and confidentiality rules.
+      </p>
+
+      <div class="actions">
+        <button type="button" class="button button-primary" id="startBtn">Continue</button>
+      </div>
+    </section>
+
+    
+    <section class="card" id="screenForm" hidden>
+      <h1 class="card-title">Submit a claim</h1>
+
+      <form class="form" id="claimForm">
+
+        <label class="label">
+          Claim type
+          <select id="claimType" class="input">
+            <option value="" selected disabled>Select…</option>
+            <option value="payroll">Payroll issue</option>
+            <option value="schedule">Scheduling conflict</option>
+            <option value="equipment">Broken equipment</option>
+            <option value="interpersonal">Interpersonal disagreement</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label class="label">
+          Details
+          <textarea id="details" class="textarea" rows="6" placeholder="Describe what happened..."></textarea>
+        </label>
+
+        <div id="warning" class="warning" hidden></div>
+
+        <div class="actions">
+          <button type="button" class="button" id="clearBtn">Clear</button>
+          <button id="submitBtn" type="submit" class="button button-primary" disabled>Submit</button>
+        </div>
+
+        <p class="fineprint">
+          Submissions are reviewed as capacity allows.
+        </p>
+      </form>
+    </section>
+
+   
+    <section class="card" id="screenThanks" hidden>
+      <h1 class="card-title">Thank you</h1>
+
+      <p>
+        Your ticket has been classified as a <strong>low priority</strong> claim.
+        Expect a reply within a couple months.
+      </p>
+
+      <p>
+        If you have any issues, please speak directly to <strong>Mr. Smith</strong>.
+      </p>
+
+      <div class="actions">
+        <button type="button" class="button button-primary" id="restartBtn">Restart</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
